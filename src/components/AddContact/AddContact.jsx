@@ -87,6 +87,7 @@ const AddContact = (props) => {
         }
     }
 
+
     return (
         <div className={styles.general}>
             <div className={styles.wrapper} onClick={openPanel}>
