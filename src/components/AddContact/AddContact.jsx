@@ -33,7 +33,7 @@ let ContactForm = (props) => {
             <div className={styles.commonError}>
                 {props.error}
             </div>
-            <button className={styles.button} disabled={props.invalid}>Добавить</button>
+            <button className={styles.button} disabled={!props.firstOpen ? true : props.invalid}>Добавить</button>
         </form>
     );
 };
@@ -60,7 +60,8 @@ ContactForm = reduxForm({
 const AddContact = (props) => {
     let formRef = React.createRef();
     let accordionRef = React.createRef();
-    let i = 5
+    let i = 5;
+    let firstOpen = 0;
 
     const onSubmit= (formData) => {
         if (Object.keys(formData).length !== 0) {
@@ -80,7 +81,10 @@ const AddContact = (props) => {
 
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
-                if (Object.keys(formRef.current.values).length) formRef.current.reset();
+                if (Object.keys(formRef.current.values).length) {
+                    formRef.current.reset();
+                    firstOpen++;
+                }
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
@@ -93,7 +97,7 @@ const AddContact = (props) => {
             <div className={styles.wrapper} onClick={openPanel}>
                 <button className={styles.accordion} ref={accordionRef}>Добавить контакт</button>
                 <div className={styles.panel}>
-                    <ContactForm onSubmit={onSubmit} ref={formRef}/>
+                    <ContactForm onSubmit={onSubmit} ref={formRef} firsOpen={firstOpen}/>
                 </div>
             </div>
         </div>
