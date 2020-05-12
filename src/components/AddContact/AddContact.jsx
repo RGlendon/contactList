@@ -61,11 +61,14 @@ const AddContact = (props) => {
     let formRef = React.createRef();
     let accordionRef = React.createRef();
     let i = 5
+
     const onSubmit= (formData) => {
-        props.addContact({...formData, _id: i});
-        // console.log({...formData, _id: i})
-        i++;
-        openPanel();
+        if (Object.keys(formData).length !== 0) {
+            props.addContact({...formData, _id: i});
+            i++;
+            openPanel();
+        }
+
     };
 
     function openPanel(e) {
