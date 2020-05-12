@@ -1,0 +1,34 @@
+.common {
+    margin: 10px auto 50px;
+    /*position: relative;*/
+
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    /*width: 50%;*/
+    overflow: hidden;
+    margin: auto;
+
+    border: 2px solid var(--color-black);
+    border-radius: 5px;
+}
+
+.movingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .5s;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.item:last-of-type {
+    margin-right: 0;
+}

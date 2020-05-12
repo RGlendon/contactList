@@ -1,0 +1,15 @@
+.slider {}
+.dot {}
+/*++++++++++++*/
+
+.active {}
+
+.slider.active {
+    transition: all 0s;
+    cursor: grabbing;
+}
+
+.dot.activeDot {
+    background-color: var(--color-black);
+}
+

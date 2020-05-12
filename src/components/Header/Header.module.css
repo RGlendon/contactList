@@ -1,0 +1,44 @@
+.header {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+
+  /*padding-right: 5%;*/
+}
+
+.title {
+  width: 70%;
+  text-align: center;
+
+  font-size: 40px;
+  line-height: 1;
+  color: var(--color-black);
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-size: cover;
+  background-image: url("https://cdn.shopify.com/s/files/1/1804/6139/products/The_Purge-Balck_Base_Mask_800x800.jpg?v=1567392045");
+
+  margin-right: 20px;
+}
+
+.auth {
+  margin-right: 20px;
+}
+
+.button {
+  background-image: url("../../assets/logout.svg");
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}

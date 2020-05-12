@@ -1,0 +1,19 @@
+.general {
+    width: 90%;
+    margin: auto;
+}
+
+.search {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+
+.container {
+    display: flex;
+}
+
+.information {
+    /*display: none;*/
+}

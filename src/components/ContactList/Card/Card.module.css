@@ -1,0 +1,106 @@
+.general {
+    margin: 10px;
+    width: 100%;
+    border: 1px solid var(--color-black);
+    border-radius: 3px;
+}
+
+.container {
+    position: relative;
+    padding: 5px;
+    padding-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 3fr 100px;
+    gap: 20px;
+    align-items: center;
+}
+
+.avatarWrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.avatar {
+    width: 70px;
+    /*height: 70px;*/
+
+    background-size: contain;
+    background-position: center;
+}
+
+
+.avatarEdit {
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px var(--color-black);
+}
+
+.name {
+    font-size: 21px;
+    color: var(--color-black);
+}
+
+.control {
+    display: flex;
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+.controlEdit {
+    opacity: 1;
+}
+
+.general:hover .control {
+    opacity: 1;
+}
+
+.edit {
+    background-image: url('../../../assets/pencil.svg');
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    opacity: .7;
+}
+.edit:hover {
+    opacity: 1;
+}
+
+.approve {
+    background-image: url('../../../assets/check.svg');
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 20px;
+    opacity: .7;
+}
+.approve:hover {
+    opacity: 1;
+}
+
+.delete {
+    background-image: url('../../../assets/delete.svg');
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: .7;
+}
+.delete:hover {
+    opacity: 1;
+}
+
+.editItem {
+    font-size: 18px;
+    color: var(--color-black);
+    width: 100%;
+}
+
+.editUrl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 80%;
+    font-size: 18px;
+    color: var(--color-black);
+}

@@ -1,0 +1,120 @@
+.general {
+    font-style: normal;
+    color: var(--color-black);
+    padding: 50px 0;
+}
+
+.wrapper {
+    border: 2px solid var(--color-black);
+    border-radius: 5px;
+    position: relative;
+}
+
+.accordion {
+    background-color: transparent;
+    color: var(--color-black);
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+    width: calc(100% - 20px);
+    margin:  27px auto 0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 35px;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:first-of-type {
+    margin-top: 0;
+}
+
+.panel {
+    background-color: transparent;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    z-index: 1;
+}
+
+.content {
+    padding: 20px;
+}
+
+.accordion:after {
+    content: '\002B';
+    font-size: 35px;
+    color: var(--color-black);
+
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    vertical-align: center;
+}
+
+.active:after {
+    content: '\2212';
+}
+
+
+.form {
+    width: 100%;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.inputPlace {
+    margin-top: 30px;
+    width: 100%;
+}
+
+
+.button {
+    display: block;
+    width: 45%;
+    height: 40px;
+    margin: 50px auto 0;
+
+
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 17px;
+
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+
+    transition: all 0.3s ease;
+
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.button:disabled {
+    cursor: default;
+    border: 1px solid rgba(0, 0, 0, .3);
+    color: rgba(0, 0, 0, .3);
+    background-color: transparent;
+}
+
+.commonError {
+    color: red;
+    background-color: aliceblue;
+}
