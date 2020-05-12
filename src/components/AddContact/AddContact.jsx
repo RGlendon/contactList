@@ -80,7 +80,7 @@ const AddContact = (props) => {
 
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
-                formRef.current.reset('contactForm');
+                if (Object.keys(formRef.current.values).length) formRef.current.reset();
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }

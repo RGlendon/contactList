@@ -21,7 +21,6 @@ function authReducer(state = initialState, action) {
                     isLogin: true
                 }
             }
-            sendError();
             return {
                 ...state,
                 isLogin: false,

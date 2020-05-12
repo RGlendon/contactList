@@ -43,7 +43,7 @@
     background-image: url("../../assets/information.svg");
     width: 25px;
     height: 25px;
-    cursor: pointer;
+    cursor: help;
     position: absolute;
     top: 20px;
     right: 20px;
